@@ -1,0 +1,24 @@
+.top {
+  margin: auto;
+  text-align: center;
+  width: 100%;
+  background-image: url("http://www.svsu.edu/media/test.png");
+  color: red;
+}
+
+.row-heading {
+  width: 100%;
+  margin: auto;
+}
+
+.main {
+  width: 100%;
+}
+
+.links {
+  margin: auto;
+  list-style-type: none;
+  width: 100%;
+  text-align: left;
+  padding: 0px;S
+}
