@@ -1,0 +1,47 @@
+<!doctype html>
+<html ng-app="app" ng-cloak>
+<header>
+  <title>Angular Part 2</title>
+  <style>
+  [ng\:cloak], [ng-cloak], .ng-cloak {
+    display: none;
+  }
+  .bluetext {
+    color:blue;
+  }
+  .boldtext {
+    font-weight: bold;
+  }
+  .stripedblue {
+    color:#007FFF;
+    background-color:#DBE9F4;
+  }
+  .stripedbeige {
+    color:#CC0000;
+    background-color:#F5F5DC;
+  }
+  </style>
+</header>
+<body>
+  <div ng-controller="coursesctrl">
+      Enter course prefix(Will only accept one at a time): <br  />
+      <input id="prefix" type="text" value="CS"/>
+      <input type="button" ng-click=getCourses() />
+      <table>
+        <tr ng-repeat="course in courses">
+          <td ng-class="checkNumber(course.courseNumber)">
+            {{course.prefix}}
+          </td>
+          <td ng-class="checkNumber(course.courseNumber)">
+            {{course.courseNumber}}
+          </td>
+        </tr>
+      </table>
+  </div>
+
+  <!-- Load the AngularJS library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
+
+    <script src="AngularPart2.js"></script>
+</body>
+</html>

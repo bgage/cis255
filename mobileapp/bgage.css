@@ -1,0 +1,42 @@
+.text {
+  font-weight: bold;
+}
+
+img {
+  height: 200px;
+  width: 250px;
+}
+
+.firstlvl {
+  list-style-type: circle;
+}
+
+.secondlvl {
+  list-style-type: circle;
+  margin-left: 2em;
+}
+
+.reqlists {
+  text-align: center;
+}
+
+.centerdiv {
+  text-align: center;
+}
+
+.area {
+  font-size: 1.25em;
+  font-weight: bold;
+}
+.subarea {
+  font-size: 1.25em;
+  margin-left: 1.5em;
+}
+
+.classes {
+  text-align: center;
+  font-size: 1em;
+  font-size: normal;
+}
+
+#map, #map-canvas { width: 100%; height: 100%; padding: 0; }

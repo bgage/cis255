@@ -1,0 +1,117 @@
+	<head>
+        <title>Bootstrap 1</title>
+        
+         <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+        <!-- Latest compiled JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    </head>
+
+    <body>
+         <nav class="navbar navbar-inverse" data-spy="affix" data-offset-top="197">
+          <div class="container-fluid">
+            <div class="navbar-header">
+              <a class="navbar-brand" href="#">WebSiteName</a>
+            </div>
+            <ul class="nav navbar-nav">
+              <li class="active"><a href="#">Home</a></li>
+              <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#">Page 1
+                <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Page 1-1</a></li>
+                  <li><a href="#">Page 1-2</a></li>
+                  <li><a href="#">Page 1-3</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Page 2</a></li>
+              <li><a href="#">Page 3</a></li>
+            </ul>
+          </div>
+        </nav> 
+        
+        <div class="jumbotron text-center">
+          <h1>My First Bootstrap Web Page</h1>
+          <p>Resize this responsive page to see the effect!</p>
+        </div>
+        
+        
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-4">
+              <h3>Column 1</h3>
+              <p>Lorem ipsum dolor..</p>
+              <p>Ut enim ad..</p>
+            </div>
+            <div class="col-sm-4">
+              <h3>Column 2</h3>
+              <p>Lorem ipsum dolor..</p>
+              <p>Ut enim ad..</p>
+            </div>
+            <div class="col-sm-4">
+              <h3>Column 3</h3>
+              <p>Lorem ipsum dolor..</p>
+              <p>Ut enim ad..</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="container">
+          <h2>Dropdowns</h2>
+          <p>The .dropdown-header class is used to add headers inside the dropdown menu:</p>
+          <div class="dropdown">
+            <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Tutorials
+            <span class="caret"></span></button>
+            <ul class="dropdown-menu">
+              <li class="dropdown-header">Dropdown header 1</li>
+              <li><a href="#">HTML</a></li>
+              <li><a href="#">CSS</a></li>
+              <li><a href="#">JavaScript</a></li>
+              <li class="divider"></li>
+              <li class="dropdown-header">Dropdown header 2</li>
+              <li><a href="#">About Us</a></li>
+            </ul>
+          </div>
+        </div>
+        
+         <div class="panel-group">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h4 class="panel-title">
+                <a data-toggle="collapse" href="#collapse1">Collapsible panel</a>
+              </h4>
+            </div>
+            <div id="collapse1" class="panel-collapse collapse">
+              <div class="panel-body">Panel Body</div>
+              <div class="panel-footer">Panel Footer</div>
+            </div>
+          </div>
+        </div> 
+        
+         <form>
+          <div class="input-group">
+            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+            <input id="email" type="text" class="form-control" name="email" placeholder="Email">
+          </div>
+          <div class="input-group">
+            <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+            <input id="password" type="password" class="form-control" name="password" placeholder="Password">
+          </div>
+          <div class="input-group">
+            <span class="input-group-addon">Text</span>
+            <input id="msg" type="text" class="form-control" name="msg" placeholder="Additional Info">
+          </div>
+        </form> 
+    </body>
+    
+
+
+</html>
+

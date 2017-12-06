@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+
+		<title>Basic mobile app</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<link rel="stylesheet" href="https://code.jquery.com/mobile/1.0rc2/jquery.mobile-1.0rc2.min.css" />
+		<script type="text/javascript" src="https://code.jquery.com/jquery-1.6.4.min.js"></script>
+		<script type="text/javascript" src="https://code.jquery.com/mobile/1.0rc2/jquery.mobile-1.0rc2.min.js"></script>
+
+	</head>
+
+	<body>
+
+		<!-- Home -->
+		<div data-role="page" id="index">
+			<header data-role="header">
+				<h1>Memes forever</h1>
+			</header>
+			<div data-role="content">
+				<h3>MEMES??</h3>
+				<p>hint: click the button recieve meme!</p>
+				<p><a href="#favsites" data-role="button" data-theme="a">Find Your Own</a></p>
+				<p><a href="#dogs" data-role="button" data-theme="b">Dogs</a></p>
+				<p><a href="#cats" data-role="button" data-theme="c">Cats</a></p>
+				<p><a href="#programmers" data-role="button" data-theme="d">Programmers</a></p>
+				<p><a data-inline="true" href="#about" data-role="button" data-theme="e">About us</a>
+				<a data-inline="true" href="#about" data-role="button" data-theme="a">About us</a> <a data-inline="true" href="#about" data-role="button" data-theme="a">About us</a></p>
+			</div>
+
+			<footer data-role="footer">
+				<h2>&copy; footer here.</h2>
+			</footer>
+
+		</div>
+
+		<!-- About -->
+		<div data-role="page" id="favsites" data-add-back-btn="true">
+			<header data-role="header">
+				<a href="index.html" data-icon="gear" data-theme="b" class="ui-btn-right">Settings</a>
+				<h1>Favorite</h1>
+			</header>
+
+			<div data-role="content">
+				<table>
+          <tr>
+            <th>
+              Site
+            </th>
+          </tr>
+          <tr>
+            <td>
+              <a href="http://www.facebook.com" data-rel="external">Teh Bad One</a>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <a href="http://www.reddit.com" data-rel="external">Teh Maybe Crazy One</a>
+            </td>
+          </tr>
+        </table>
+			</div>
+
+			<footer data-role="footer" class="ui-body-b">
+			  <div data-role="navbar">
+				<ul>
+				  <li><a href="#index" data-direction="reverse">App Homescreen!</a></li>
+				  <li><a href="http://www.google.com/" data-rel="external">Google Me</a></li>
+				  <li><a href="http://www.hongkiat.com/" data-rel="external">Hongkiat Blog</a></li>
+				</ul>
+			  </div>
+			</footer>
+		</div>
+
+    <div data-role="page" id="dogs" data-add-back-btn="true">
+      <header data-role="header">
+				<a href="index.html" data-icon="gear" data-theme="b" class="ui-btn-right">Settings</a>
+				<h1>Favorite</h1>
+			</header>
+      <div data-role="content">
+        <img src="https://upload.wikimedia.org/wikipedia/en/5/5f/Original_Doge_meme.jpg" />
+      </div>
+
+      <footer data-role="footer" class="ui-body-b">
+			  <div data-role="navbar">
+				<ul>
+				  <li><a href="#index" data-direction="reverse">App Homescreen!</a></li>
+				  <li><a href="http://www.google.com/" data-rel="external">Google Me</a></li>
+				  <li><a href="http://www.hongkiat.com/" data-rel="external">Hongkiat Blog</a></li>
+				</ul>
+			  </div>
+			</footer>
+    </div>
+
+    <div data-role="page" id="cats" data-add-back-btn="true">
+      <header data-role="header">
+				<a href="index.html" data-icon="gear" data-theme="b" class="ui-btn-right">Settings</a>
+				<h1>Favorite</h1>
+			</header>
+      <div data-role="content">
+        <img src="https://media.mnn.com/assets/images/2013/05/grumpyCatComplain.jpg.838x0_q80.jpg" />
+      </div>
+
+      <footer data-role="footer" class="ui-body-b">
+			  <div data-role="navbar">
+				<ul>
+				  <li><a href="#index" data-direction="reverse">App Homescreen!</a></li>
+				  <li><a href="http://www.google.com/" data-rel="external">Google Me</a></li>
+				  <li><a href="http://www.hongkiat.com/" data-rel="external">Hongkiat Blog</a></li>
+				</ul>
+			  </div>
+			</footer>
+    </div>
+
+    <div data-role="page" id="programmers" data-add-back-btn="true">
+      <header data-role="header">
+				<a href="index.html" data-icon="gear" data-theme="b" class="ui-btn-right">Settings</a>
+				<h1>Favorite</h1>
+			</header>
+      <div data-role="content">
+        <img src="https://img.buzzfeed.com/buzzfeed-static/static/enhanced/webdr03/2013/7/25/5/enhanced-buzz-17903-1374744218-23.jpg?downsize=715:*&output-format=auto&output-quality=auto" />
+      </div>
+
+      <footer data-role="footer" class="ui-body-b">
+			  <div data-role="navbar">
+				<ul>
+				  <li><a href="#index" data-direction="reverse">App Homescreen!</a></li>
+				  <li><a href="http://www.google.com/" data-rel="external">Google Me</a></li>
+				  <li><a href="http://www.hongkiat.com/" data-rel="external">Hongkiat Blog</a></li>
+				</ul>
+			  </div>
+			</footer>
+    </div>
+
+	</body>
+
+</html>
+<!--
+INSTRUCTIONS
+
+1. copy The Standard HTML Template code from:
+https://www.hongkiat.com/blog/build-websites-apps-jquery-mobile/
+
+2. optional: read All You Need to Know About the HTML5 Data Attribute
+https://webdesign.tutsplus.com/tutorials/all-you-need-to-know-about-the-html5-data-attribute--webdesign-9642
+
+3. copy the Constructing the Body Content code from:
+https://www.hongkiat.com/blog/build-websites-apps-jquery-mobile/
+
+4. test the code in your browser
+if it does not work you might have to change all instances of "http:" to "https:"
+
+5. add 4 more buttons and use the other themes "a" through "e", like this:
+    <p><a href="#about" data-role="button" data-theme="b">About us</a></p>
+
+6. add attribute-value to your last button: data-inline="true"
+
+7. copy Top Bar Buttons code from:
+https://www.hongkiat.com/blog/build-websites-apps-jquery-mobile/
+this code will add "Back" button to About page
+
+8. copy Footer Navigation code to your About page from:
+https://www.hongkiat.com/blog/build-websites-apps-jquery-mobile/
+
+more ideas...
+http://view.jquerymobile.com/master/demos/
+-->

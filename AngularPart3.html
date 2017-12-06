@@ -1,0 +1,72 @@
+<!doctype html>
+<html ng-app="app" ng-cloak>
+
+  <head>
+    <style>
+      [ng\:cloak], [ng-cloak], .ng-cloak {
+        display: none;
+      }
+    </style>
+
+  </head>
+
+  <body>
+    <div ng-controller="userCtrl">
+      <form name="userForm" ng-submit="saveUser(userInfo)">
+        <label>First Name:</label>
+
+        <!-- Define that a value is required and it must be 2 characters in length or more -->
+        <input type="text" name="fName" ng-model="userInfo.fName"
+        ng-required="true" ng-minlength="2" />
+
+        <!-- $dirty is set to true if a user interacts with a element and then we check if the elements required field is true -->
+        <span class="error-message" ng-show="userForm.fName.$dirty
+        && userForm.fName.$error.required">Must Enter a First Name
+        </span>
+
+        <!-- Check if the element has been edited and whether it contains at least 2 characters -->
+        <span class="error-message" ng-show="userForm.fName.$dirty
+          && userForm.fName.$error.minlength">Must be a Minimum of 2 Characters</span>
+
+        <br /><br />
+
+        <label>Last Name:</label>
+
+        <input type="text" name="lName" ng-model="userInfo.lName"
+        ng-required="true" ng-minlength="2" />
+
+        <span class="error-message" ng-show="userForm.lName.$dirty
+        && userForm.lName.$error.required">Must Enter a Last Name
+        </span>
+
+        <span class="error-message" ng-show="userForm.lName.$dirty
+          && userForm.lName.$error.minlength">Must be a Minimum of 2 Characters</span>
+
+        <br /><br />
+
+        <label>Phone Number: </label>
+        <input type="text" name="phoneNumber" id="phoneNumber" ng-model="userInfo.phone" ng-pattern="/^[+]*[(]{0,1}[0-9]{1,3}[)]{0,1}[-\s\./0-9]*$/g"/>
+        <span class="error-message" ng-show="userForm.phoneNumber.$error.pattern && userForm.phoneNumber.$invalid">Is Not a Phone Number</span>
+        <br /><br />
+        <label>E-Mail: </label>
+        <input type="text" name="email" id="email" ng-model="userInfo.email" ng-pattern="/[A-z]{3,}\@[A-z]{3,6}\.[A-z]{3}/"/>
+        <span class="error-message" ng-show="userForm.email.$error.pattern && userForm.email.$invalid">Is Not a Email</span>
+        <br /><br />
+        <label>City: </label>
+        {{city}}
+        <br /><br />
+        <label>State: </label>
+        {{state}}
+        <br /><br />
+        <label>Zip: </label>
+        <input type="text" name="zip" ng-model="userInfo.zip" ng-required="true" ng-minlength="5" ng-blur="getCityState()" ng-disabled="userForm.fname.$invalid && userForm.lname.$invalid"/>
+        <span class="error-message" ng-show="userForm.zip.$dirty
+          && userForm.zip.$error.minlength">Must be a Minimum of 5 Characters</span>
+        <br /><br />
+        <input type="submit" value="Save" ng-disabled="userForm.$invalid"/>
+      </form>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
+    <script src="AngularPart3.js"></script>
+  </body>
+</html>

@@ -1,0 +1,241 @@
+.accordion {
+    background: linear-gradient(to bottom right, white, #F8F8F8);
+    max-width: 400px;
+    background: white;
+    margin: 0 auto;
+  box-shadow: 0 15px 20px -15px rgba(0, 0, 0, 0.3), 0 35px 50px -25px rgba(0, 0, 0, 0.3), 0 85px 60px -25px rgba(0, 0, 0, 0.1);
+}
+
+.accordion-header {
+    border-bottom: 1px solid #DDE0E7;
+    color: #2a313a;
+    cursor: pointer;
+    font-weight: 700;
+    padding: 1.5rem;
+}
+
+.accordion-header:hover {
+    background: #F6F7F9;
+}
+
+.accordion-content {
+    display: none;
+    border-bottom: 1px solid #DDE0E7;
+    background: #F6F7F9;
+    padding: 1.5rem;
+    color: #4a5666;
+}
+
+.accordion-header::before {
+    content: '';
+    vertical-align: middle;
+    display: inline-block;
+    width: .75rem;
+    height: .75rem;
+    border-radius: 50%;
+    background-color: #B1B5BE;
+    margin-right: .75rem;
+}
+
+.active.accordion-header::before {
+    background-color: #FC6468;
+}
+
+.tabs {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.tab-list {
+    padding-bottom: 1rem;
+}
+
+.tab {
+    border: 1px solid transparent;
+    border-radius: 40px;
+    display: inline-block;
+    text-decoration: none;
+    padding: .5rem 1rem;
+    color: rgba(255, 255, 255, .6);
+    font-weight: 700;
+    background: rgba(10, 20, 30, .2);
+}
+
+.tab.active {
+    color: blue;
+    background: rgba(255,255,255,.1);
+    border: 1px solid rgba(255, 255, 255, .6);
+}
+
+.tab-content {
+    background: linear-gradient(to bottom right, white, #F8F8F8);
+  box-shadow: 0 15px 20px -15px rgba(0, 0, 0, 0.3), 0 35px 50px -25px rgba(0, 0, 0, 0.3), 0 85px 60px -25px rgba(0, 0, 0, 0.1);
+    display: none;
+    padding: 1.5rem;
+    color: #4a5666;
+}
+
+.show {
+    display: block;
+}
+
+nav#drop {
+    margin: 0 auto;
+    max-width: 400px;
+    background: rgba(10, 20, 30, .85);
+}
+
+nav#drop::after {
+    display: block;
+    content: '';
+    clear: both;
+}
+
+nav#drop ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+nav#drop ul li {
+    float: left;
+    position: relative;
+}
+
+nav#drop ul li a {
+    display: block;
+    color: rgba(255, 255, 255, .9);
+    text-decoration: none;
+    padding: 1rem;
+    border-top: 2px solid transparent;
+    border-bottom: 2px solid transparent;
+}
+
+nav#drop ul li a:hover,
+nav#drop ul li a:focus {
+    background: rgba(10, 20, 30, .9);
+}
+
+nav#drop ul li a:focus {
+    color: white;
+}
+
+nav#drop ul li a:not(:only-child)::after {
+    padding-left: 4px;
+    content: ' ▾';
+}
+
+nav#drop ul li ul li {
+    min-width: 190px;
+}
+
+nav#drop ul li ul li a {
+    background: transparent;
+    color: #4a5666;
+    border-bottom: 1px solid #DDE0E7;
+}
+
+nav#drop ul li ul li a:hover,
+nav#drop ul li ul li a:focus {
+    background: #e7e9ef;
+    color: #111;
+}
+
+
+.dropdown {
+    display: none;
+    position: absolute;
+    margin-top: 6px;
+    background: linear-gradient(to bottom right, white, #F8F8F8) !important;
+    box-shadow: 0 4px 10px rgba(10, 20, 30, .4);
+}
+
+.dropdown::after {
+    content: '';
+    position: absolute;
+    left: 30px;
+    top: -8px;
+    width: 0;
+    height: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-bottom: 8px solid white;
+}
+
+.dropdown:hover::after {
+    border-bottom: 8px solid #F6F7F9;
+}
+
+.overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.5);
+	opacity: 0;
+	transition: .5s ease;
+	z-index: -1;
+}
+
+.overlay.active {
+	opacity: 1;
+	z-index: 2;
+}
+
+.container {
+	color: white;
+	max-height: calc(100% - 100px);
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	max-width: 450px;
+	transform: translate(-50%, -50%);
+	background: blue;
+	z-index: 3;
+	visibility: hidden;
+	opacity: 0;
+	transition: .5s ease;
+}
+
+
+.container.active {
+	visibility: visible;
+	opacity: 1;
+}
+
+html {
+	height: 200vh;
+}
+
+nav#scroll {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	background: #000;
+	color: white;
+	height: 40px;
+	line-height: 40px;
+	transition: .5s all ease;
+}
+
+nav#scroll.active {
+	background: blue;
+}
+
+#begin {
+	margin-top: 80vh;
+	border-top: 1px solid blue;
+}
+
+hr {
+	height: 100vh;
+}
+
+.slider {
+	position: relative;
+}
+
+.slider > div {
+	position: absolute;
+}

@@ -1,0 +1,56 @@
+<!doctype html>
+<html ng-app="app" ng-init="courses = [
+  {item: 'CIS255', taken: false},
+  {item: 'CS116', taken: false},
+  {item: 'CS216', taken: false},
+  {item: 'CS316', taken: false},
+  {item: 'CIS357', taken: false},
+  {item: 'CS401', taken: false},
+  {item: 'CIS355', taken: false}
+];">
+  <head>
+    <title>AngularJS Tutorial</title>
+    <style>
+      [ng\:cloak], [ng-cloak], .ng-cloak {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div ng-controller="ctrlHypotenuse">
+      <span>Sides:</span> <br />
+
+      Side A: <input type="text" ng-model="sideA" /> <br />
+      Side B: <input type="text" ng-model="sideB" /> <br />
+
+      <button ng-click="calculateC()">Calculate Hypotenuse</button>
+      <br /><br />
+
+      Side C = {{calculation}}
+    </div>
+
+    <div id="courseList" ng-controller="ctrlcList">
+      <h3 class="ListTitle">{{courses.length}} Courses to Take</h3>
+      <ol>
+        <li ng-repeat = "course in courses">
+          {{ 'course: ' + course.item + ', Taken: ' + course.taken}}
+        </li>
+      </ol>
+
+      <br />
+
+        <button ng-click="aRandomCourse(1, courses.length, courses)">A Random Course</button>
+        {{randomcourse1}}
+
+        <br />
+        <button ng-click="aRandomCourse(2, courses.length, courses)">A Different Random Course</button>
+        {{randomcourse2}}
+
+
+    </div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
+    <script src="07aAngular-Part1.js"></script>
+  </body>
+</html>

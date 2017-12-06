@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>My title</title>
+    
+    <style>
+      #container {
+        width: 400px;
+        height: 400px;
+        position: relative;
+        background:yellow;
+      }
+      #animate {
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        background:red;
+      }
+    </style>
+  </head>
+    
+  <body>
+    <p id="demo"></p>
+    <a href="#">My link</a>
+    <h1>My Header</h1>
+    
+    <form id="frm1" action="/action_page.php">
+      First name: <input type="text" name="fname" value="Donald"><br>
+      Last name: <input type="text" name="lname" value="Duck"><br><br>
+      <input type="submit" value="Submit">
+    </form> 
+    
+    <button onclick="myFunction()">Try it</button>
+    
+    <p>
+      <button onclick="myMove()">Click Me</button>
+    </p> 
+    
+    <div id="container">
+      <div id="animate"></div>
+    </div>
+    <script>
+      function myFunction() {
+        var x = document.forms["frm1"];
+        var text = "";
+        var i;
+        for (i = 0; i < x.length; i++) {
+          text += x.elements[i].value + "<br />";
+        }
+        document.getElementById("demo").innerHTML = text;
+      }
+      
+      function myMove() {
+          var elem = document.getElementById("animate");
+          var pos = 0;
+          var id = setInterval(frame, 5);
+          function frame() {
+              if (pos == 350) {
+                  clearInterval(id);
+              } else {
+                  pos++;
+                  elem.style.top = pos + 'px';
+                  elem.style.left = pos + 'px';
+              }
+          }
+      }
+      
+      document.write(Date());
+      
+      
+      //document.getElementById("demo").innerHTML = "Hello World!!!";
+    </script>
+  </body>
+
+</html>
